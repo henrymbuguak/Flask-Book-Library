@@ -1,19 +1,22 @@
-from flask_restful import Resource, reqparse
+from flask_restful import Resource, reqparse, request
 from models import *
 from flask_jwt_extended import (
     create_access_token, create_refresh_token, jwt_required,
     jwt_refresh_token_required, get_jwt_identity, get_raw_jwt
 )
+from flask import jsonify
 
 parser = reqparse.RequestParser()
 parser.add_argument('username', help='This field cannot be blank', required=True)
 parser.add_argument('password', help='This field cannot be blank', required=True)
 
+registered_users = []
+add_book = []
+
 
 class UserRegistration(Resource):
     def post(self):
         data = parser.parse_args()
-
         if UserModel.find_by_username(data['username']):
             return {'message': 'Username {} already exist'.format(data['username'])}
 
@@ -22,7 +25,8 @@ class UserRegistration(Resource):
             password=UserModel.generate_hash(data['password']),
         )
         try:
-            new_user.save_to_db()
+            # new_user.save_to_db()
+            registered_users.append(new_user)
             access_token = create_access_token(identity=data['username'])
             refresh_token = create_refresh_token(identity=data['username'])
             return {
@@ -87,7 +91,8 @@ class TokenRefresh(Resource):
 
 class AllUsers(Resource):
     def get(self):
-        return UserModel.return_all()
+        return jsonify(registered_users=registered_users)
+        # return UserModel.return_all()
 
     def delete(self):
         return UserModel.delete_all()
@@ -97,4 +102,15 @@ class SecretResource(Resource):
     @jwt_required
     def get(self):
         return {'answer': 43}
+
+
+class CreateBook(Resource):
+    def post(self):
+        data = request.form['title']
+        author = request.form['author']
+        genre = request.form['genre']
+        add_book.append(data)
+        add_book.append(author)
+        add_book.append(genre)
+        return jsonify(add_book)
 
