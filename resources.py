@@ -5,13 +5,11 @@ from flask_jwt_extended import (
     jwt_refresh_token_required, get_jwt_identity, get_raw_jwt
 )
 from flask import jsonify
+from run import add_book, registered_users
 
 parser = reqparse.RequestParser()
 parser.add_argument('username', help='This field cannot be blank', required=True)
 parser.add_argument('password', help='This field cannot be blank', required=True)
-
-registered_users = []
-add_book = []
 
 
 class UserRegistration(Resource):
@@ -109,8 +107,13 @@ class CreateBook(Resource):
         data = request.form['title']
         author = request.form['author']
         genre = request.form['genre']
+        id = request.form['id']
         add_book.append(data)
         add_book.append(author)
         add_book.append(genre)
-        return jsonify(add_book)
+        add_book.append(id)
+        return add_book
 
+    def get(self, book_id):
+        print(add_book)
+        return {book_id: add_book[book_id]}

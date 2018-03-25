@@ -30,6 +30,8 @@ def check_if_token_in_blacklist(decrypted_token):
     jti = decrypted_token['jti']
     return models.RevokedTokenModel.is_jti_blacklisted(jti)
 
+add_book = []
+registered_users = []
 
 import views, models, resources
 
@@ -41,4 +43,5 @@ api.add_resource(resources.TokenRefresh, '/token/refresh')
 api.add_resource(resources.AllUsers, '/users')
 api.add_resource(resources.SecretResource, '/secret')
 api.add_resource(resources.CreateBook, '/api/books')
+api.add_resource(resources.CreateBook, '/api/books/<int:book_id>', endpoint='book_edit')
 
