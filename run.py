@@ -6,7 +6,7 @@ from flask_jwt_extended import JWTManager
 app = Flask(__name__)
 api = Api(app)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:3918km1990km@localhost/flask'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['SECRET_KEY'] = '8ur$*&ebeugxsg%3l1^2^g-(5tfh2+%v#usbb=4h$wemlprv07'
 
@@ -44,4 +44,7 @@ api.add_resource(resources.AllUsers, '/users')
 api.add_resource(resources.SecretResource, '/secret')
 api.add_resource(resources.CreateBook, '/api/books')
 api.add_resource(resources.CreateBook, '/api/books/<int:book_id>', endpoint='book_edit')
+api.add_resource(resources.CreateBook, '/api/books/<int:book_id>', endpoint='book_delete')
+api.add_resource(resources.CreateBook, '/api/books/<int:book_id>', endpoint='book_update')
+api.add_resource(resources.GetAllBooks, '/api/books/all', endpoint='retrieve_all_books')
 

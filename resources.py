@@ -1,4 +1,4 @@
-from flask_restful import Resource, reqparse, request
+from flask_restful import Resource, reqparse, request, abort
 from models import *
 from flask_jwt_extended import (
     create_access_token, create_refresh_token, jwt_required,
@@ -117,3 +117,19 @@ class CreateBook(Resource):
     def get(self, book_id):
         print(add_book)
         return {book_id: add_book[book_id]}
+
+    def put(self, book_id):
+        args = parser.parse_args()
+        book = {'book': args['book']}
+        add_book[book_id] = book
+        return book, 201
+
+    def delete(self, book_id):
+        if book_id not in add_book:
+            abort(404, message="Book {} does not exist".format(book_id))
+        del add_book[book_id]
+
+
+class GetAllBooks(Resource):
+    def get(self):
+        return add_book
