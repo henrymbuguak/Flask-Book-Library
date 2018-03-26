@@ -32,4 +32,8 @@ is active. run the following command:
 
 ##### To test Endpoints Using Postman
 
-Still working on this.
+This are the endpoint I have today:
+
+* show all books and create book /api/books
+* Edit book /api/books/<int:book_id>
+* delete a book /api/books/<int:book_id>
