@@ -58,6 +58,10 @@ class BasicTests(unittest.TestCase):
         self.assertEquals(response.status_code, 200)
         self.assertIn(b'Thanks for registering!', response.data)
 
+    def test_valid_user_login(self):
+        response = self.login('henry@gmail.com', 'password')
+        self.assertEquals(response.status_code, 200)
+
 
 if __name__ == "__main__":
     unittest.main()
