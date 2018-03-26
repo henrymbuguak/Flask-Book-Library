@@ -37,3 +37,8 @@ This are the endpoint I have today:
 * show all books and create book:  /api/books
 * Edit book:  /api/books/<int:book_id>
 * delete a book:  /api/books/<int:book_id>
+
+
+###### Basic test
+
+Have a look at test_basic.py file to see how I am approaching unit test
