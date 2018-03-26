@@ -1,6 +1,6 @@
 import unittest
 from run import *
-from resources import UserRegistration
+from resources import UserRegistration, CreateBook
 
 
 class TestUserRegistration(unittest.TestCase):
