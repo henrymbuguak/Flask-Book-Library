@@ -26,16 +26,37 @@ class BasicTests(unittest.TestCase):
         ############################
 
     def test_main_page(self):
-        response = self.app.get('/api/books', follow_redirects=False)
+        response = self.app.get('/api/books', follow_redirects=True)
         self.assertEquals(response.status_code, 500)
 
     def test_delete_book(self):
         response = self.app.delete('/api/books/<int:book_id>')
-        self.assertEquals(response.status_code, 400)
+        self.assertEquals(response.status_code, 200)
 
     def test_update_book(self):
         response = self.app.post('/api/books/<int:book_id>')
         self.assertEquals(response.status_code, 200)
+
+        ########################
+        #### helper methods ####
+        ########################
+    def register(self, username, password):
+        return self.app.post('/api/auth/register', data=dict(
+            username=username, password=password
+        ), follow_redirects=True)
+
+    def login(self, username, password):
+        return self.app.post('/api/auth/login', data=dict(
+            username=username, password=password
+        ), follow_redirects=True)
+
+    def logout(self):
+        return self.app.get('/api/auth/logout', follow_redirects=True)
+
+    def test_valid_user_registeration(self):
+        response = self.register('henry@gmail.com', 'password')
+        self.assertEquals(response.status_code, 200)
+        self.assertIn(b'Thanks for registering!', response.data)
 
 
 if __name__ == "__main__":
