@@ -19,7 +19,8 @@ class BasicTests(unittest.TestCase):
         db.create_all()
 
     def tearDown(self):
-        pass
+        "tear down test fixtures"
+        print('### Tearing down the flask server ###')
 
         ############################
         #### setup and teardown ####
@@ -53,6 +54,11 @@ class BasicTests(unittest.TestCase):
     def logout(self):
         return self.app.get('/api/auth/logout', follow_redirects=True)
 
+    def password_reset(self, username):
+        return self.app.post('/api/auth/reset-password', data=dict(
+            username=username
+        ), follow_redirects=True)
+
     def test_valid_user_registeration(self):
         response = self.register('henry@gmail.com', 'password')
         self.assertEquals(response.status_code, 200)
@@ -61,6 +67,11 @@ class BasicTests(unittest.TestCase):
     def test_valid_user_login(self):
         response = self.login('henry@gmail.com', 'password')
         self.assertEquals(response.status_code, 200)
+
+    def test_password_reset(self):
+        response = self.password_reset('henry@gmail.com')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'Your password has been reset successfully!')
 
 
 if __name__ == "__main__":
