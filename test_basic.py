@@ -19,7 +19,8 @@ class BasicTests(unittest.TestCase):
         db.create_all()
 
     def tearDown(self):
-        pass
+        "tear down test fixtures"
+        print('### Tearing down the flask server ###')
 
         ############################
         #### setup and teardown ####
