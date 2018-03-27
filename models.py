@@ -60,7 +60,7 @@ class RevokedTokenModel(db.Model):
         return bool(query)
 
 
-class AuthorModel(db.model):
+class AuthorModel(db.Model):
     __tablename__ = 'authors'
 
     id = db.Column(db.Integer, primary_key=True)
@@ -72,14 +72,14 @@ class AuthorModel(db.model):
         db.session.commit()
 
 
-class BookModel(db.model):
+class BookModel(db.Model):
     __tablename__ = 'books'
 
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(120), unique=True, nullable=False)
     genre = db.Column(db.String(120), unique=True, nullable=False)
-    description = db.Column(db.text(), unique=False, nullable=False)
-    author_id = db.Column(db.Integer, db.ForeignKey('author.id'), nullable=False)
+    description = db.Column(db.Text, unique=False, nullable=False)
+    author_id = db.Column(db.Integer, db.ForeignKey('authors.id'), nullable=False)
 
     def save_to_db(self):
         db.session.add(self)
