@@ -15,3 +15,18 @@ install:
 # command to run tests
 script:
 #  - pytest # or py.test for Python versions 3.5 and below
+
+env:
+  global:
+    - CC_TEST_REPORTER_ID=05d4b5bb3c5b4bc88e45ad677069eed766c7807555fadc7d6e06d163fe609b62
+language: python
+rvm:
+  - 2.2.0
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+script:
+  - bundle exec rspec
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT

@@ -1,4 +1,4 @@
-# Flask-Book-Library [![Build Status](https://travis-ci.org/henrymbuguak/Flask-Book-Library.svg?branch=master)](https://travis-ci.org/henrymbuguak/Flask-Book-Library)
+# Flask-Book-Library [![Maintainability](https://api.codeclimate.com/v1/badges/92de23a6ec9740be5cf3/maintainability)](https://codeclimate.com/github/henrymbuguak/Flask-Book-Library/maintainability)
 
 This a flask restful api created using flask web framework to management books as I learn to 
 become a better software developer.
