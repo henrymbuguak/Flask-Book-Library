@@ -59,7 +59,7 @@ class BasicTests(unittest.TestCase):
             username=username
         ), follow_redirects=True)
 
-    def test_valid_user_registeration(self):
+    def test_valid_user_registration(self):
         response = self.register('henry@gmail.com', 'password')
         self.assertEquals(response.status_code, 200)
         self.assertIn(b'Thanks for registering!', response.data)
