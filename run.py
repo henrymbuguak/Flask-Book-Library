@@ -52,4 +52,4 @@ api.add_resource(resources.CreateBook, '/api/books/<int:book_id>', endpoint='boo
 api.add_resource(resources.CreateBook, '/api/books/<int:book_id>', endpoint='book_update')
 api.add_resource(resources.GetAllBooks, '/api/books/all', endpoint='retrieve_all_books')
 api.add_resource(resources.UserPasswordReset, '/api/auth/reset-password', endpoint='reset_password')
-
+api.add_resource(resources.BorrowBook, '/api/users/books/<bookId>', endpoint='borrow_book')

@@ -143,3 +143,11 @@ class CreateBook(Resource):
 class GetAllBooks(Resource):
     def get(self):
         return add_book
+
+
+class BorrowBook(Resource):
+    def post(self, book_id):
+        args = parser.parse_args()
+        book = {'book': args['book']}
+        add_book[book_id] = book
+        return add_book
