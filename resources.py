@@ -87,6 +87,16 @@ class TokenRefresh(Resource):
         return {'access_token': access_token}
 
 
+class UserPasswordReset(Resource):
+    def post(self):
+        def post(self):
+            data = parser.parse_args()
+            user = UserModel.find_by_username(data['username'])
+            if not user:
+                return {'message': 'User {} does not exist'.format(data['username'])}
+            return {'message': 'To reset password follow this link'}
+
+
 class AllUsers(Resource):
     def get(self):
         return jsonify(registered_users=registered_users)
