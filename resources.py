@@ -6,6 +6,7 @@ from flask_jwt_extended import (
 )
 from flask import jsonify
 from run import add_book, registered_users
+import json
 
 parser = reqparse.RequestParser()
 parser.add_argument('username', help='This field cannot be blank', required=True)
@@ -122,7 +123,12 @@ class CreateBook(Resource):
         add_book.append(author)
         add_book.append(genre)
         add_book.append(id)
-        return add_book
+        return {
+            'title': data,
+            'author': author,
+            'genre': genre,
+            'id': id
+        }
 
     def get(self, book_id):
         print(add_book)
