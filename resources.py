@@ -12,6 +12,14 @@ parser = reqparse.RequestParser()
 parser.add_argument('username', help='This field cannot be blank', required=True)
 parser.add_argument('password', help='This field cannot be blank', required=True)
 
+user_details = {'username': ["henry@gmail.com", 'henry@gmail.com'], 'obola': ["henryk@gmail.com", 'henry@gmail.com'],
+                'leslie': ["henrym@gmail.com", 'henry@gmail.com'],
+                'henry': ["henry@gmail.com", 'henry@gmail.com']}
+
+books = {'id': ["1", 'River between'], 'love': ["2", 'Where would you be'],
+                'history': ["3", 'No where to run'],
+                'scify': ["4", 'UFO']}
+
 
 class UserRegister(Resource):
     def post(self):
@@ -89,9 +97,15 @@ class CreateBook(Resource):
         }
 
     def delete(self, book_id):
-        if book_id not in add_book:
-            abort(404, message="Book {} does not exist".format(book_id))
-        del add_book[book_id]
+        id = request.form[book_id]
+        book = books['id']
+        if id == book[0]:
+            return {
+                'message': 'book delete successfully'
+            }
+        return {
+            'message': 'No book with that id'
+        }
 
 
 class GetAllBooks(Resource):
@@ -103,3 +117,18 @@ class BorrowBook(Resource):
     def post(self, book_id):
 
         return add_book
+
+
+class UserPasswordReset(Resource):
+
+    def post(self):
+        username = request.form['username']
+        email = user_details['username']
+        if username == email[0]:
+            return {
+                'message': 'reset password here'
+            }
+        else:
+            return {
+                'message': 'There is no user with that username'
+            }
