@@ -62,7 +62,7 @@ class BasicTests(unittest.TestCase):
     def test_valid_user_registration(self):
         response = self.register('henry@gmail.com', 'password')
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b'Thanks for registering!', response.data)
+        self.assertIn('Thanks for registering!', response.data)
 
     def test_valid_user_login(self):
         response = self.login('henry@gmail.com', 'password')
