@@ -1,0 +1,17 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://github.com/henrymbuguak/Flask-Book-Library.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[branch "new_feature"]
+	remote = origin
+	merge = refs/heads/new_feature
+[branch "version-1"]
+	remote = origin
+	merge = refs/heads/version-1

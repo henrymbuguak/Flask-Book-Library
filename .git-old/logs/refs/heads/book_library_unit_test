@@ -1,0 +1,5 @@
+0000000000000000000000000000000000000000 cec905e1640567cae63755ebab569a14e7257425 henrymbuguak <henrymbuguak@gmail.com> 1521983778 +0300	branch: Created from add_book_endpoint
+cec905e1640567cae63755ebab569a14e7257425 fa4fd4b4853d16ca09db534e72a2fb27c33718f6 henrymbuguak <henrymbuguak@gmail.com> 1521992339 +0300	commit: writing user register test
+fa4fd4b4853d16ca09db534e72a2fb27c33718f6 eeadf1f856fdd37a7817fe85da489779873bc050 henrymbuguak <henrymbuguak@gmail.com> 1522066470 +0300	commit: add, edit, delete and view books endpoint
+eeadf1f856fdd37a7817fe85da489779873bc050 6e9f1c03a26f3d02fd0cb1af22f8f9491cbf221c henrymbuguak <henrymbuguak@gmail.com> 1522068453 +0300	commit: Writing test cases for the endpoints
+6e9f1c03a26f3d02fd0cb1af22f8f9491cbf221c 942a0bc65815c490b544081dab0301dc447a82e4 henrymbuguak <henrymbuguak@gmail.com> 1522068774 +0300	commit: Updating readme file with endpoints

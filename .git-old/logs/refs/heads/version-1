@@ -1,0 +1,13 @@
+0000000000000000000000000000000000000000 ecce9552ea327d2ba93759073abe87429838c2e2 henrymbuguak <henrymbuguak@gmail.com> 1522069932 +0300	branch: Created from refs/remotes/origin/version-1
+ecce9552ea327d2ba93759073abe87429838c2e2 67d990562fc116ba7688b2cdf03b4fc072ee898d henrymbuguak <henrymbuguak@gmail.com> 1522069946 +0300	pull origin master: Fast-forward
+67d990562fc116ba7688b2cdf03b4fc072ee898d 32e587c2c673a91e0e004380ef453c3a1327dfac henrymbuguak <henrymbuguak@gmail.com> 1522071903 +0300	commit: Writing a basic unit test
+32e587c2c673a91e0e004380ef453c3a1327dfac edd52e90e5f9358d8d07369b92686c30ec60751f henrymbuguak <henrymbuguak@gmail.com> 1522083133 +0300	pull origin master: Fast-forward
+edd52e90e5f9358d8d07369b92686c30ec60751f dc668bae948ce6f65938f14b577daa7c330493ba henrymbuguak <henrymbuguak@gmail.com> 1522091850 +0300	commit: login unit test
+dc668bae948ce6f65938f14b577daa7c330493ba de82949ea79677658dec76fd264bb0cd76add023 henrymbuguak <henrymbuguak@gmail.com> 1522143248 +0300	commit: travis yml file travis CI
+de82949ea79677658dec76fd264bb0cd76add023 ad7fb0853308456c654c17db3cc837c8236ebac9 henrymbuguak <henrymbuguak@gmail.com> 1522149414 +0300	commit: Author and book model
+ad7fb0853308456c654c17db3cc837c8236ebac9 8df7419e62a7b03479cfa40556b219a64ea75758 henrymbuguak <henrymbuguak@gmail.com> 1522151562 +0300	commit: Reset password has a bug
+8df7419e62a7b03479cfa40556b219a64ea75758 4d3ce7ec3fb74b13aeb7f1c62a6e593226792570 henrymbuguak <henrymbuguak@gmail.com> 1522153068 +0300	commit: Changes in the book model and test basic file
+4d3ce7ec3fb74b13aeb7f1c62a6e593226792570 c9d1d344b2f1cf5c7c0b2585def336cca04c5bc6 henrymbuguak <henrymbuguak@gmail.com> 1522153753 +0300	commit: Add CI badge in my project
+c9d1d344b2f1cf5c7c0b2585def336cca04c5bc6 a364ef9955e27c90be73c3f3d5743fdbc256a543 henrymbuguak <henrymbuguak@gmail.com> 1522155489 +0300	pull origin master: Fast-forward
+a364ef9955e27c90be73c3f3d5743fdbc256a543 b1dcbcdad94fbd4dc0653c863224debcf661578e henrymbuguak <henrymbuguak@gmail.com> 1522155700 +0300	commit: Change on user unit test case
+b1dcbcdad94fbd4dc0653c863224debcf661578e 4d8ebedd91bea3c262ce1a4e9fc922591b0b365e henrymbuguak <henrymbuguak@gmail.com> 1522156705 +0300	commit: Improvement on failing tests

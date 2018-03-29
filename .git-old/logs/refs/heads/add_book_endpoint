@@ -1,0 +1,2 @@
+0000000000000000000000000000000000000000 49920d8db74580384b1d8d518ffe3e2340800fdd henrymbuguak <henrymbuguak@gmail.com> 1521970453 +0300	branch: Created from register_login_endpoints
+49920d8db74580384b1d8d518ffe3e2340800fdd cec905e1640567cae63755ebab569a14e7257425 henrymbuguak <henrymbuguak@gmail.com> 1521973519 +0300	commit: adding book endpoint implementation

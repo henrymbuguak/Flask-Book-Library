@@ -1,0 +1,19 @@
+0000000000000000000000000000000000000000 890d35ad6c743f3ab0705697ad2d309a7e849117 henrymbuguak <henrymbuguak@gmail.com> 1521825653 +0300	clone: from https://github.com/henrymbuguak/Flask-Book-Library.git
+890d35ad6c743f3ab0705697ad2d309a7e849117 a7dcb9d2746733605b4f7fc2f3df493237c33770 henrymbuguak <henrymbuguak@gmail.com> 1521827178 +0300	commit: created requirements.txt file to track dependecies
+a7dcb9d2746733605b4f7fc2f3df493237c33770 8ae3d0620a751a71d7517e18c9dd8f314f4bf6d9 henrymbuguak <henrymbuguak@gmail.com> 1521900385 +0300	pull origin new_feature: Merge made by the 'recursive' strategy.
+8ae3d0620a751a71d7517e18c9dd8f314f4bf6d9 ecce9552ea327d2ba93759073abe87429838c2e2 henrymbuguak <henrymbuguak@gmail.com> 1521900504 +0300	commit: Merged new_feature with master
+ecce9552ea327d2ba93759073abe87429838c2e2 942a0bc65815c490b544081dab0301dc447a82e4 henrymbuguak <henrymbuguak@gmail.com> 1522068865 +0300	pull origin book_library_unit_test: Fast-forward
+942a0bc65815c490b544081dab0301dc447a82e4 67d990562fc116ba7688b2cdf03b4fc072ee898d henrymbuguak <henrymbuguak@gmail.com> 1522069587 +0300	commit: Changes on readme file regarding endpoints
+67d990562fc116ba7688b2cdf03b4fc072ee898d 32e587c2c673a91e0e004380ef453c3a1327dfac henrymbuguak <henrymbuguak@gmail.com> 1522071960 +0300	pull origin version-1: Fast-forward
+32e587c2c673a91e0e004380ef453c3a1327dfac edd52e90e5f9358d8d07369b92686c30ec60751f henrymbuguak <henrymbuguak@gmail.com> 1522082595 +0300	commit: Register unit test
+edd52e90e5f9358d8d07369b92686c30ec60751f de82949ea79677658dec76fd264bb0cd76add023 henrymbuguak <henrymbuguak@gmail.com> 1522143299 +0300	pull origin version-1: Fast-forward
+de82949ea79677658dec76fd264bb0cd76add023 5bc5fd2bf001fa3d98510122aa72e7d94dc78432 henrymbuguak <henrymbuguak@gmail.com> 1522144854 +0300	commit: Changes on travis yml file install
+5bc5fd2bf001fa3d98510122aa72e7d94dc78432 a9e7682b4669790dd2dc6211b6654b34da22de2c henrymbuguak <henrymbuguak@gmail.com> 1522146723 +0300	commit: Changes on travis yml file dependency install
+a9e7682b4669790dd2dc6211b6654b34da22de2c bab8b66ce7be5538e488be318f7af1710d67d423 henrymbuguak <henrymbuguak@gmail.com> 1522147453 +0300	commit: Commentet on test
+bab8b66ce7be5538e488be318f7af1710d67d423 c3b226ff9ab17287ef9108e7a37b09da418aa08a henrymbuguak <henrymbuguak@gmail.com> 1522153837 +0300	pull origin version-1: Merge made by the 'recursive' strategy.
+c3b226ff9ab17287ef9108e7a37b09da418aa08a a364ef9955e27c90be73c3f3d5743fdbc256a543 henrymbuguak <henrymbuguak@gmail.com> 1522155285 +0300	commit: endpoint for user to borrow a book
+a364ef9955e27c90be73c3f3d5743fdbc256a543 9939b71c8bce450c162ef9bca612fcdcb7c01772 henrymbuguak <henrymbuguak@gmail.com> 1522161624 +0300	commit: Changes on the badge on the readme
+9939b71c8bce450c162ef9bca612fcdcb7c01772 12f45a2f8fd6c09d2775b00427420d76d2638119 henrymbuguak <henrymbuguak@gmail.com> 1522162526 +0300	pull origin version-1: Merge made by the 'recursive' strategy.
+12f45a2f8fd6c09d2775b00427420d76d2638119 10ef706d1c931ff7e79d824bc75534cb6235bb47 henrymbuguak <henrymbuguak@gmail.com> 1522218854 +0300	commit: Changes on creating books method
+10ef706d1c931ff7e79d824bc75534cb6235bb47 2134ab323eab18adf5588a492d80b7f0a6106b32 henrymbuguak <henrymbuguak@gmail.com> 1522312683 +0300	commit: Changes on the test
+2134ab323eab18adf5588a492d80b7f0a6106b32 f85946caa5df854d0bb935c2c990ea94b05f8e5a henrymbuguak <henrymbuguak@gmail.com> 1522313990 +0300	commit: A fix on the put post api

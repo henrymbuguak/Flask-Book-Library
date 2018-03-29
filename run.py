@@ -11,14 +11,6 @@ api = Api(app)
 app.config['SECRET_KEY'] = '8ur$*&ebeugxsg%3l1^2^g-(5tfh2+%v#usbb=4h$wemlprv07'
 
 
-# db = SQLAlchemy(app)
-#
-#
-# @app.before_first_request
-# def create_tables():
-#     db.create_all()
-
-
 app.config['JWT_SECRET_KEY'] = '9ur$*&ebeugxsg%3l1^2^g-(5tfh2+%v#usbb=4h$wemlprv09'
 jwt = JWTManager(app)
 
