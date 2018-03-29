@@ -135,10 +135,20 @@ class CreateBook(Resource):
         return {book_id: add_book[book_id]}
 
     def put(self, book_id):
-        args = parser.parse_args()
-        book = {'book': args['book']}
-        add_book[book_id] = book
-        return book, 201
+        title = request.form['title']
+        author = request.form['author']
+        genre = request.form['genre']
+        id = request.form['id']
+        add_book.append(title)
+        add_book.append(author)
+        add_book.append(genre)
+        add_book.append(book_id)
+        return {
+            'title': title,
+            'author': author,
+            'genre': genre,
+            'id': id
+        }
 
     def delete(self, book_id):
         if book_id not in add_book:
