@@ -1,27 +1,17 @@
 from flask import Flask
 from flask_restful import Api
-from flask_sqlalchemy import SQLAlchemy
 from flask_jwt_extended import JWTManager
 
 app = Flask(__name__)
 api = Api(app)
 
 
-# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['SECRET_KEY'] = '8ur$*&ebeugxsg%3l1^2^g-(5tfh2+%v#usbb=4h$wemlprv07'
-
-
 app.config['JWT_SECRET_KEY'] = '9ur$*&ebeugxsg%3l1^2^g-(5tfh2+%v#usbb=4h$wemlprv09'
 jwt = JWTManager(app)
 
 app.config['JWT_BLACKLIST_ENABLED'] = False
 app.config['JWT_BLACKLIST_TOKEN_CHECKS'] = ['access', 'refresh']
-
-
-@jwt.token_in_blacklist_loader
-def check_if_token_in_blacklist(decrypted_token):
-    jti = decrypted_token['jti']
-    return models.RevokedTokenModel.is_jti_blacklisted(jti)
 
 
 add_book = []

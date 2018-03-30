@@ -16,7 +16,6 @@ user_details = {'username': ["henry@gmail.com", 'henry@gmail.com'], 'obola': ["h
                 'leslie': ["henrym@gmail.com", 'henry@gmail.com'],
                 'henry': ["henry@gmail.com", 'henry@gmail.com']}
 
-# books = {'id':['1'], 'title':['Welcome to africa'], 'genre': ['history'], 'author': ['henry']}
 books = []
 
 
@@ -64,10 +63,6 @@ class CreateBook(Resource):
         author = request.form['author']
         genre = request.form['genre']
         id = request.form['id']
-        # books['id'] = id,
-        # books['title'] = data,
-        # books['author'] = author,
-        # books['genre'] = genre,
         for entry in data, author, genre, id:
             book = {'id': id, 'author': author, 'genre': genre, 'title': data}
             books.append(book)
@@ -107,7 +102,6 @@ class CreateBook(Resource):
 
 class GetAllBooks(Resource):
     def get(self):
-        # values = [{'id': id, 'title': title} for id, title in books.items()]
         return books
 
 
