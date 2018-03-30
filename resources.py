@@ -16,7 +16,7 @@ user_details = {'username': ["henry@gmail.com", 'henry@gmail.com'], 'obola': ["h
                 'leslie': ["henrym@gmail.com", 'henry@gmail.com'],
                 'henry': ["henry@gmail.com", 'henry@gmail.com']}
 
-books = {'id': '1', 'title': 'River between', 'genre': 'political', 'author': 'henry'}
+books = {'id': '1', 'title': 'River between', 'author': 'henry'}
 
 
 class UserRegister(Resource):
@@ -108,6 +108,7 @@ class CreateBook(Resource):
 
 class GetAllBooks(Resource):
     def get(self):
+        # values = [{'id': id, 'title': title} for id, title in books.items()]
         return books
 
 
