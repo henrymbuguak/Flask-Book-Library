@@ -77,10 +77,10 @@ class CreateBook(Resource):
         author = request.form['author']
         genre = request.form['genre']
         id = request.form['id']
-        add_book.append(title)
-        add_book.append(author)
-        add_book.append(genre)
-        add_book.append(book_id)
+        books['id']=book_id
+        books['title']=title
+        books['author']=author
+        books['genre']=genre
         return {
             'title': title,
             'author': author,
