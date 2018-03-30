@@ -16,9 +16,7 @@ user_details = {'username': ["henry@gmail.com", 'henry@gmail.com'], 'obola': ["h
                 'leslie': ["henrym@gmail.com", 'henry@gmail.com'],
                 'henry': ["henry@gmail.com", 'henry@gmail.com']}
 
-books = {'id': ["1", 'River between'], 'love': ["2", 'Where would you be'],
-                'history': ["3", 'No where to run'],
-                'scify': ["4", 'UFO']}
+books = {'id': '1', 'title': 'River between', 'genre': 'political', 'author': 'henry'}
 
 
 class UserRegister(Resource):
@@ -65,10 +63,10 @@ class CreateBook(Resource):
         author = request.form['author']
         genre = request.form['genre']
         id = request.form['id']
-        add_book.append(data)
-        add_book.append(author)
-        add_book.append(genre)
-        add_book.append(id)
+        books['id'] = id,
+        books['title']= data,
+        books['author']=author,
+        books['genre']=genre
         return {
             'title': data,
             'author': author,
@@ -110,7 +108,7 @@ class CreateBook(Resource):
 
 class GetAllBooks(Resource):
     def get(self):
-        return add_book
+        return books
 
 
 class BorrowBook(Resource):
