@@ -37,6 +37,9 @@ This are the endpoint I have today:
 * show all books and create book:  /api/books
 * Edit book:  /api/books/<int:book_id>
 * delete a book:  /api/books/<int:book_id>
+* user register: /api/auth/register
+* user login: /api/auth/login
+* user logout: /api/auth/logout
 
 
 ###### Basic test
