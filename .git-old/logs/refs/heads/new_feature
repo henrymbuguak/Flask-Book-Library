@@ -1,3 +1,0 @@
-0000000000000000000000000000000000000000 890d35ad6c743f3ab0705697ad2d309a7e849117 henrymbuguak <henrymbuguak@gmail.com> 1521827304 +0300	branch: Created from refs/remotes/origin/new_feature
-890d35ad6c743f3ab0705697ad2d309a7e849117 426da08f11780e46a0ea1b03ebeb5f48857c61ec henrymbuguak <henrymbuguak@gmail.com> 1521833679 +0300	commit: created flat structure of the project and test endpoints
-426da08f11780e46a0ea1b03ebeb5f48857c61ec 857c81668f8d871b825199476dd7f159554e353a henrymbuguak <henrymbuguak@gmail.com> 1521900318 +0300	commit: Initial project setup and some test endpoints
