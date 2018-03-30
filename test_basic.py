@@ -1,6 +1,6 @@
 import os
 import unittest
-from run import app, db
+from run import app
 
 
 TEST_DB = 'test.db'
@@ -16,7 +16,6 @@ class BasicTests(unittest.TestCase):
         app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
         app.config['JWT_BLACKLIST_ENABLED'] = False
         self.app = app.test_client()
-        db.create_all()
 
     def tearDown(self):
         "tear down test fixtures"
@@ -26,7 +25,7 @@ class BasicTests(unittest.TestCase):
         #### setup and teardown ####
         ############################
 
-    def test_main_page(self):
+    def test_books(self):
         response = self.app.get('/api/books', follow_redirects=True)
         self.assertEqual(response.status_code, 500)
 
@@ -37,6 +36,7 @@ class BasicTests(unittest.TestCase):
     def test_update_book(self):
         response = self.app.post('/api/books/<int:book_id>')
         self.assertEqual(response.status_code, 404)
+
 
         ########################
         #### helper methods ####
@@ -62,7 +62,7 @@ class BasicTests(unittest.TestCase):
     def test_valid_user_registration(self):
         response = self.register('henry@gmail.com', 'password')
         self.assertEqual(response.status_code, 200)
-        self.assertIn('Thanks for registering!', response.data)
+        self.assertIn(b'username', response.data)
 
     def test_valid_user_login(self):
         response = self.login('henry@gmail.com', 'password')
