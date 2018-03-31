@@ -3,9 +3,6 @@ import unittest
 from run import app
 
 
-TEST_DB = 'test.db'
-
-
 class BasicTests(unittest.TestCase):
     ############################
     #### setup and teardown ####
