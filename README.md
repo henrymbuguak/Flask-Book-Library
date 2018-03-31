@@ -45,3 +45,5 @@ This are the endpoint I have today:
 ###### Basic test
 
 Have a look at test_basic.py file to see how I am approaching unit test
+
+To run the test run the following command: <code>python -m unittest discover</code>

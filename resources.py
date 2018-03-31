@@ -89,16 +89,8 @@ class CreateBook(Resource):
         }
 
     def delete(self, book_id):
-        id = request.form[book_id]
-        book = books['id']
-        if id == book[0]:
-            return {
-                'message': 'book delete successfully'
-            }
-        return {
-            'message': 'No book with that id'
-        }
-
+        print(str(book_id))
+        books['id'] = str(book_id)
 
 class GetAllBooks(Resource):
     def get(self):

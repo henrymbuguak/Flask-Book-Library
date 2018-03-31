@@ -16,6 +16,7 @@ class BasicTests(unittest.TestCase):
         app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
         app.config['JWT_BLACKLIST_ENABLED'] = False
         self.app = app.test_client()
+        self.app.testing = True
 
     def tearDown(self):
         "tear down test fixtures"
@@ -71,6 +72,14 @@ class BasicTests(unittest.TestCase):
     def test_password_reset(self):
         response = self.password_reset('henry@gmail.com')
         self.assertEqual(response.status_code, 200)
+
+    def test_books_api(self):
+        result = self.app.get('/api/books/all')
+        self.assertEquals(result.status_code, 200)
+
+    def test_book_update(self):
+        result = self.app.delete('/api/books/<int:book_id>')
+        self.assertNotEquals(result.status_code, 200)
 
 
 if __name__ == "__main__":
