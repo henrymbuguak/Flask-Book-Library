@@ -64,7 +64,7 @@ class CreateBook(Resource):
         genre = request.form['genre']
         id = request.form['id']
         for entry in data, author, genre, id:
-            book = {'id': id, 'author': author, 'genre': genre, 'title': data}
+            book = {'id': int(id), 'author': author, 'genre': genre, 'title': data}
             books.append(book)
             return books
 
@@ -89,8 +89,9 @@ class CreateBook(Resource):
         }
 
     def delete(self, book_id):
-        print(str(book_id))
-        books['id'] = str(book_id)
+        if ('id', book_id) in books.__getitem__(book_id):
+            books['id'] = book_id
+
 
 class GetAllBooks(Resource):
     def get(self):
