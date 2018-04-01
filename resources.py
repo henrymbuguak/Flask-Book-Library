@@ -18,6 +18,8 @@ user_details = {'username': ["henry@gmail.com", 'henry@gmail.com'], 'obola': ["h
 
 books = []
 
+new_books = {'id': 1}
+
 
 class UserRegister(Resource):
     def post(self):
@@ -73,11 +75,10 @@ class CreateBook(Resource):
         return {book_id: add_book[book_id]}
 
     def put(self, book_id):
+        books['id'] = book_id
         title = request.form['title']
         author = request.form['author']
         genre = request.form['genre']
-        id = request.form['id']
-        books['id']=book_id
         books['title']=title
         books['author']=author
         books['genre']=genre
@@ -89,8 +90,16 @@ class CreateBook(Resource):
         }
 
     def delete(self, book_id):
-        if ('id', book_id) in books.__getitem__(book_id):
-            books['id'] = book_id
+        key = 'id'
+        if key in new_books.keys():
+            new_books.pop(key)
+            return {
+                'message': 'book deleted successfully'
+            }
+        else:
+            return {
+                'message': 'Book with that id not found'
+            }
 
 
 class GetAllBooks(Resource):
